@@ -9,7 +9,7 @@ const connectToMongo = async (req , res)=>{
        await mongoose.connect(uri)
     }catch(e){
         console.log("CANNOT CONNECT TO DB" , e)
-        return res.status(500).json({msg:"something went wrong while coonecting to Database"})
+       
     }
 }
 
