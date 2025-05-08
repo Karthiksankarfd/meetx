@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "2d8bfb64-f34f-494c-b4a4-2d00e4958acb",
+		"name": "Meetx Activity Booking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31895899"
+	},
+	"item": [
+		{
+			"name": "token verify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFkMGYwNzkyMWY4NzkyNTQ2NDlmYzUiLCJpYXQiOjE3NDY3Mzc1NDEsImV4cCI6MTc0NjgyMzk0MX0.fJckLTjalc50ceoDOeZe6WbzeQViuywC4zt3lYCtzh4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/verifyjwt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"verifyjwt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registration",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "karthik",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "karthik@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "9876543210",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Karthik@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "login api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "loginemail",
+							"value": "meetx@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "loginpassword",
+							"value": "Meetx@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activity list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/activities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user booking",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFkMGYwNzkyMWY4NzkyNTQ2NDlmYzUiLCJpYXQiOjE3NDY3Mzc1NDEsImV4cCI6MTc0NjgyMzk0MX0.fJckLTjalc50ceoDOeZe6WbzeQViuywC4zt3lYCtzh4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/mybookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"mybookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "booking the activity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFkMGYwNzkyMWY4NzkyNTQ2NDlmYzUiLCJpYXQiOjE3NDY3Mzc1NDEsImV4cCI6MTc0NjgyMzk0MX0.fJckLTjalc50ceoDOeZe6WbzeQViuywC4zt3lYCtzh4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/bookactivity/681cffdc554cbfd29ef97951",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"bookactivity",
+						"681cffdc554cbfd29ef97951"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
