@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 // Basic route
 app.get('/', (req, res) => {
-   return res.status(201).json({mgs:"This meetx apis... This code contains all the postman api collection in order to test the api end points.Try https://meetx-qwo1.onrender.com/api/activities" });
+   return res.status(201).json({mgs:"This meetx apis... This code contains all the postman api collection in order to test the api end points.Try https://meetx-1-mcgp.onrender.com/api/activities" });
 });
 
 app.use("/api/auth", authentication)
