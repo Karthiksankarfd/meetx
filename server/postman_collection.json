@@ -184,12 +184,12 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFkMGYwNzkyMWY4NzkyNTQ2NDlmYzUiLCJpYXQiOjE3NDY3Mzc1NDEsImV4cCI6MTc0NjgyMzk0MX0.fJckLTjalc50ceoDOeZe6WbzeQViuywC4zt3lYCtzh4",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFkMGYwNzkyMWY4NzkyNTQ2NDlmYzUiLCJpYXQiOjE3NDY3NjUwMTAsImV4cCI6MTc0Njg1MTQxMH0.YKj_jE3coFQHMBaUkdVH_5vD7Qz969db1-Noj39lOiE",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/api/bookactivity/681cffdc554cbfd29ef97951",
+					"raw": "http://localhost:5000/api/book/681cffdc554cbfd29ef97952",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -197,8 +197,8 @@
 					"port": "5000",
 					"path": [
 						"api",
-						"bookactivity",
-						"681cffdc554cbfd29ef97951"
+						"book",
+						"681cffdc554cbfd29ef97952"
 					]
 				}
 			},
